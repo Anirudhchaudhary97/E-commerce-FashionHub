@@ -8,12 +8,13 @@ const Navbar = () => {
   const [menu, setMenu] = useState("shop");
   return (
     <div className="navbar">
-      <div className="nav-logo">
+    <Link to={"/"} className="text-link"><div className="nav-logo">
         <img src={logo} alt="" />
         <p>
           <span>Fashion</span>Hub
         </p>
       </div>
+      </Link>
 
       <ul className="nav-menu">
         <Link to="/" className="text-link">

@@ -16,9 +16,11 @@
     gap: 20px;
 }
 .footer-logo p{
-    color: #383838;
+    /* color: #383838; */
     font-size: 30px;
     font-weight: 700;
+    white-space: nowrap;
+    color: rgb(49, 6, 6);
 }
 .footer-link{
     display: flex;
@@ -41,4 +43,22 @@
     padding-bottom: 6px;
     background: #fbfbfb;
     border:  1px solid #ebebeb;
+}
+.footer-copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    color: #1a1a1a;
+    font-size: 20px;
+    margin-bottom: 30px;
+
+}
+.footer-copyright hr{
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    height: 3px;
+    background:#c7c7c7;
 }
