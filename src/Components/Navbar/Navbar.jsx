@@ -1,13 +1,21 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import "./Navbar.css";
 import logo from "../Assest/logo.png";
 import cart_icon from "../Assest/cart_icon.png";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
+import MenuIcon from '@mui/icons-material/Menu';
+
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
    const{getTotalCartItems}=useContext(ShopContext)
+   const menuRef= useRef()
+
+   const menuIconToggle=(e)=>{
+           menuRef.current.classList.toggle("nav-menu-visible")
+           e.target.classList.toggle("open")
+   }
   return (
     <div className="navbar">
     <Link to={"/"} className="text-link"><div className="nav-logo">
@@ -17,8 +25,8 @@ const Navbar = () => {
         </p>
       </div>
       </Link>
-
-      <ul className="nav-menu">
+        <MenuIcon className="dropmenu-icon" onClick={menuIconToggle}/>
+      <ul ref={menuRef} className="nav-menu">
         <Link to="/" className="text-link">
           <li
             onClick={() => {
