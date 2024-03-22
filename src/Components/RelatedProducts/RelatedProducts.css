@@ -27,3 +27,81 @@
      gap:30px;
      margin-bottom: 100px;
 } 
+
+
+
+
+
+
+
+/* making responsive */
+
+@media(max-width:1280px){
+   
+    .relatedproducts h1{
+        font-size: 30px;
+       
+    }
+    .relatedproducts hr{
+        width: 160px;
+        height:4px;
+    }
+  .relatedproducts-item{
+    gap: 10px;
+    margin-top: 20px;
+  }
+    
+}
+
+@media(max-width:1024px){
+    
+    .relatedproducts h1{
+        font-size: 25px;
+       
+    }
+    .relatedproducts hr{
+        width: 120px;
+        height:3px;
+    }
+  .relatedproducts-item{
+    gap: 10px;
+    margin-top: 20px;
+  }
+    
+}
+
+@media(max-width:800px){
+    .relatedproducts{
+       
+        gap: 6px;
+    }
+    .relatedproducts h1{
+        font-size: 22px;
+       
+    }
+    .relatedproducts hr{
+        width: 100px;
+        height:2px;
+    }
+  .relatedproducts-item{
+    gap: 5px;
+    
+  }
+    
+}
+
+@media(max-width:500px){
+   .relatedproducts{
+   
+    gap: 5px;
+    margin-top:0px;
+   }
+
+    .relatedproducts-item{
+       
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;  
+        
+    }
+}
