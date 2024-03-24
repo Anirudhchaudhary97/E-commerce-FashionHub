@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import all_product from "../Components/Assest/all_product";
+import swal from "sweetalert";
 
 export const ShopContext = createContext(null);
 
@@ -15,9 +16,25 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
   const addToCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    try {
+      setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+      swal({
+        title: "Successfully Added",
+        icon: "success",
+        buttons: false,
+        timer: 2000,
+      });
+    } catch (err) {
+      swal({
+        title: err,
+        icon: "error",
+        buttons: false,
+        timer: 2000,
+      });
+    }
   };
-  console.log(cartItems);
+ 
+  
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
