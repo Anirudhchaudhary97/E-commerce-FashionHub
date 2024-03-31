@@ -23,7 +23,7 @@
 .nav-menu{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap:30px;
     list-style: none;
     font-size: 20px;
     color: #626262;
@@ -90,7 +90,20 @@
 
 
 
-
+/* Search bar styles */
+/* .search-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+  } */
+  
 
 /* making responsive */
 
@@ -122,6 +135,7 @@
         margin-left: -40px;
         font-size: 12px;
      }
+     
 }
 
 @media(max-width:1024px){
@@ -145,6 +159,7 @@
             width: 18px;
             height: 18px;
         }
+       
 }
 
 @media(max-width:800px){
@@ -169,6 +184,9 @@
     .nav-menu-visible{
         display: flex;
     }
+
+    
+      
 }
 
 @media(max-width:500px){

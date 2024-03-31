@@ -64,6 +64,18 @@ const Navbar = () => {
           </li>
         </Link>
       </ul>
+
+       {/* Search bar */}
+       {/* <form className="search-form">
+        <input
+          type="text"
+          placeholder="Search..."
+          value=""
+          className="search-input"
+        />
+      </form> */}
+      {/* search bar send */}
+
       <div className="nav-login-cart">
         <Link className="text-link" to="/login">
           <button>Login</button>

@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState,useEffect } from "react";
 import all_product from "../Components/Assest/all_product";
 import swal from "sweetalert";
 
@@ -13,7 +13,22 @@ const getDefaultCart = () => {
 };
 
 const ShopContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState(getDefaultCart());
+
+  // const [cartItems, setCartItems] = useState(getDefaultCart());
+
+   // updating above cartItems such that to show cartItems even if page is refresh and store them in localstorage
+
+   const [cartItems, setCartItems] = useState(() => {
+    const storedCart = localStorage.getItem("cart");
+    return storedCart ? JSON.parse(storedCart) : getDefaultCart();
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+  }, [cartItems]);
+
+
+  // function to add cart
 
   const addToCart = (itemId) => {
     try {
