@@ -32,7 +32,7 @@ const Footer = () => {
          </div>
          <div className="footer-copyright">
             <hr/>
-            <p>Created by Anirudh chaudhary<span style={{
+            <p>Created by Anirudh Kumar chaudhary<span style={{
                color:"#ff4545"
             }}>❤</span>Copyright @ 2024 All Right Reserve.</p>
          </div>
